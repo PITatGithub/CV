@@ -1,20 +1,165 @@
-<!-- Auszug aus deiner generierten index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Architect Portfolio</title>
+    <title>IT Architect Portfolio | Cloud & Enterprise</title>
+    <!-- Tailwind CSS via CDN für zero-config Deployment -->
     <script src="https://tailwindcss.com"></script>
     <style>
-        body { background-color: #0b0f19; color: #f3f4f6; }
-        .bento-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
-        .bento-card:hover { border-color: #3b82f6; transform: translateY(-2px); }
+        .bento-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+        .tech-badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
     </style>
 </head>
-...
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Main Container -->
+    <main class="max-w-6xl w-full mx-auto px-4 py-8 md:py-16">
+        
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-auto">
+            
+            <!-- 1. HERO PROFILE CARD (Nimmt 2 Spalten auf Desktop ein) -->
+            <div class="bento-card md:col-span-2 p-6 md:p-8 flex flex-col justify-between min-h-[280px]">
+                <div>
+                    <div class="flex items-center space-x-2 text-blue-400 font-mono text-sm mb-4">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>~/architect/profile</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-2">
+                        Dein Name
+                    </h1>
+                    <p class="text-xl md:text-2xl font-medium text-gray-300 mb-4">
+                        Senior IT Architect & Cloud Strategist
+                    </p>
+                    <p class="text-gray-400 max-w-xl leading-relaxed text-sm md:text-base">
+                        Ich konzipiere hochverfügbare, skalierbare und zukunftssichere IT-Infrastrukturen. Meine Kernkompetenz liegt an der Schnittstelle zwischen Business-Strategie und moderner Cloud-Native-Technologie.
+                    </p>
+                </div>
+                
+                <!-- Socials / Quick Links -->
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="https://linkedin.com" target="_blank" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-medium rounded-lg transition border border-white/10 flex items-center gap-2">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-medium rounded-lg transition border border-white/10 flex items-center gap-2">
+                        🐙 GitHub
+                    </a>
+                    <a href="mailto:deine.mail@domain.com" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium rounded-lg transition flex items-center gap-2">
+                        ✉️ Kontakt aufnehmen
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. ARCHITECTURE DOMAINS (1 Spalte) -->
+            <div class="bento-card p-6 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        🎯 Fokus & Domains
+                    </h2>
+                    <ul class="space-y-3 font-mono text-xs md:text-sm text-gray-300">
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>◽ Multi-Cloud Strategy</span>
+                            <span class="text-blue-400">[95%]</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>◽ Microservices & Mesh</span>
+                            <span class="text-blue-400">[90%]</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>◽ Zero Trust Security</span>
+                            <span class="text-blue-400">[85%]</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-1">
+                            <span>◽ FinOps / Cost Opt.</span>
+                            <span class="text-blue-400">[80%]</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4 p-3 bg-blue-950/40 rounded-xl border border-blue-900/30 text-xs text-blue-300">
+                    <strong>Methodik:</strong> TOGAF, Domain-Driven Design (DDD) & Well-Architected Frameworks.
+                </div>
+            </div>
+
+            <!-- 3. PROJECT SHOWCASE 1 (1 Spalte) -->
+            <div class="bento-card p-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">Case Study 01</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">Cloud-Migration FinTech</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Migration einer monolithischen Core-Banking-Plattform in ein reguliertes, hochverfügbares AWS Multi-Account Framework.
+                    </p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">AWS</span>
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">EKS</span>
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">Terraform</span>
+                </div>
+            </div>
+
+            <!-- 4. PROJECT SHOWCASE 2 (1 Spalte) -->
+            <div class="bento-card p-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Case Study 02</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">Event-Driven IoT Platform</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Architektur-Design für Echtzeit-Datenverarbeitung von weltweit 500k+ vernetzten IoT-Devices in der Automobilbranche.
+                    </p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">Azure</span>
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">Kafka</span>
+                    <span class="px-2 py-0.5 text-[10px] font-mono text-gray-300 tech-badge rounded">CosmosDB</span>
+                </div>
+            </div>
+
+            <!-- 5. TECH STACK MATRIX (1 Spalte) -->
+            <div class="bento-card p-6">
+                <h3 class="text-sm font-mono text-gray-400 uppercase tracking-wider mb-3">🛠️ Tech Stack & Ecosystem</h3>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 text-xs text-blue-300 bg-white/5 border border-white/10 rounded-lg">AWS</span>
+                    <span class="px-2.5 py-1 text-xs text-blue-300 bg-white/5 border border-white/10 rounded-lg">Azure</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Kubernetes</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Docker</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Terraform</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">GitOps</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Istio</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Python</span>
+                    <span class="px-2.5 py-1 text-xs text-gray-300 bg-white/5 border border-white/10 rounded-lg">Go</span>
+                </div>
+            </div>
+
+            <!-- 6. EXPERIENCE TIMELINE (Nimmt 3 Spalten ein) -->
+            <div class="bento-card md:col-span-3 p-6 md:p-8">
+                <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                    📈 Letzte Stationen
+                </h3>
+                <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
+                    
+                    <!-- Station 1 -->
+                    <div class="relative pl-4 border-l-2 border-blue-500/50">
+                        <span class="text-xs font-mono text-blue-400">2024 — Heute</span>
+                        <h4 class="text-base font-bold text-white mt-1">Lead IT Architect</h4>
+                        <p class="text-xs text-gray-400 mb-2">Global Tech Consulting GmbH</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Verantwortung für Enterprise-Infrastrukturen und Cloud Governance.</p>
+                    </div>
+
